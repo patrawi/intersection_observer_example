@@ -24,12 +24,12 @@ export const CharacterCard: React.FC<ICharacterCard> = ({ character }) => {
     }
   }, [observer, imageSrc]);
   return (
-    <div className=" bg-slate-400 max-w-xl w-full text-white rounded-xl shadow-2xl">
-      <div className="flex gap-4">
+    <div className=" bg-slate-400  w-full text-white rounded-xl shadow-2xl">
+      <div className="flex flex-col sm:flex-row gap-4">
         <img
           ref={imageSection}
           src={imageSrc}
-          className="rounded-l-lg"
+          className="rounded-l-lg max-w-full h-auto"
           loading="lazy"
           alt={character.name ?? "some unnamed chracter"}
         />
